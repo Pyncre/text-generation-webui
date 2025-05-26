@@ -75,4 +75,4 @@ conda activate "$INSTALL_ENV_DIR"
 
 # setup installer env
 PORT=${PORT:-7860}
-python one_click.py $@
+python one_click.py --host 0.0.0.0 --port "$PORT" "$@"
