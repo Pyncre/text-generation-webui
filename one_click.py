@@ -11,7 +11,8 @@ import subprocess
 import sys
 if os.environ.get("RENDER") == "true":
     input = lambda prompt="": "N"  # For GPU choice
-    sys.argv.append("--listen")    # Ensure listen is enabled
+    if "--listen" not in sys.argv:
+        sys.argv.append("--listen")
 sys.path.append(os.path.join(os.path.dirname(__file__), 'modules'))
 import shared
 
