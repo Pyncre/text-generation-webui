@@ -74,6 +74,7 @@ source "$CONDA_ROOT_PREFIX/etc/profile.d/conda.sh" # otherwise conda complains a
 conda activate "$INSTALL_ENV_DIR"
 "$INSTALL_ENV_DIR/bin/pip" install pyyaml
 
+
 # setup installer env
 PORT=${PORT:-7860}
 echo "Starting server on port: $PORT"
