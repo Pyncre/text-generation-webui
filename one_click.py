@@ -9,8 +9,9 @@ import signal
 import site
 import subprocess
 import sys
+
 sys.path.append(os.path.join(os.path.dirname(__file__), 'modules'))
-from modules import shared
+import shared
 
 # Remove the '# ' from the following lines as needed for your AMD GPU on Linux
 # os.environ["ROCM_PATH"] = '/opt/rocm'
