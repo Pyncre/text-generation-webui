@@ -9,11 +9,16 @@ import signal
 import site
 import subprocess
 import sys
+import shared
 
 # Remove the '# ' from the following lines as needed for your AMD GPU on Linux
 # os.environ["ROCM_PATH"] = '/opt/rocm'
 # os.environ["HSA_OVERRIDE_GFX_VERSION"] = '10.3.0'
 # os.environ["HCC_AMDGPU_TARGET"] = 'gfx1030'
+
+if shared.args.listen:
+    shared.args.listen_host = shared.args.listen_host or "0.0.0.0"
+    shared.args.listen_port = int(os.environ.get("PORT", 7860))
 
 # Define the required versions
 TORCH_VERSION = "2.6.0"
